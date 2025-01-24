@@ -2,8 +2,6 @@
 
 This repository showcases a project on a **Real-Time Surveillance System** designed to enhance security by integrating advanced object detection, motion tracking, and crime detection capabilities. This project was developed as part of an academic endeavor and highlights the methodologies, skills, and tools used to achieve the objectives. 
 
-While the codebase is not included due to academic constraints, the detailed project report is provided to illustrate the system's capabilities, design, and outcomes.
-
 ---
 
 ## **Objective**
@@ -57,9 +55,9 @@ The system integrates multiple state-of-the-art models to provide a unified solu
 ## **Experimental Protocol**
 
 - **Datasets Used**:
-  - **MS COCO Dataset**: Pre-trained YOLOv8 for object detection.
-  - **MOT20 Dataset**: Enhanced DeepSORT for tracking multiple objects.
-  - **UCF Crime Dataset**: Trained the MULDE model for crime detection tasks.
+  - **MS COCO Dataset**: COCO consists of over 200,000 labeled images with 80 object categories and 5 captions per image.
+  - **MOT20 Dataset**: MOT20 provides detailed annotations for multiple object tracking scenarios.
+  - **UCF Crime Dataset**: UCF crime dataset consists of 1900 real-world surveillance videos depicting various criminal activities.
 
 - **Testing**:
   - Conducted experiments on live video feeds and pre-recorded .mp4 files.
