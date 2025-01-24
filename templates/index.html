@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Upload a Video</h1>
+    <form action="{{ url_for('upload_video') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required>
+        <br>
+        <button type="submit">Upload Video</button>
+    </form>
+
+    <h1>Live Video Feed</h1>
+    <div>
+        <button onclick="startVideo()">Start Live Video Feed</button>
+        <button onclick="stopVideo()">Stop Live Video Feed</button>
+    </div>
+    <br>
+    <img id="liveFeed" src="" style="width: 100%; max-width: 600px; max-height: 600px;" alt="Live Feed">
+
+    <script>
+        function startVideo() {
+            var liveFeed = document.getElementById('liveFeed');
+            liveFeed.src = "{{ url_for('video_feed') }}";
+        }
+
+        function stopVideo() {
+            var liveFeed = document.getElementById('liveFeed');
+            liveFeed.src = "";
+            fetch("{{ url_for('stop_video') }}");
+        }
+    </script>
+</body>
+</html>
